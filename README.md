@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Finance Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Finance Tracker is a minimalist and effective personal finance tracking application built with Node.js, Express, and React. It allows users to manage their income, expenses, and savings with features like transaction categorization, budget setting, and simple visualizations. The application emphasizes secure coding practices and data encryption to ensure user privacy and data security.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Track income and expenses
+- Categorize transactions
+- Set and manage budgets
+- Simple visualizations for financial data
+- User authentication and authorization
+- Secure data handling and encryption
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend:** React
+- **Backend:** Node.js, Express
+- **Database:** MongoDB
+- **Authentication:** JWT
+- **Styling:** CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. **Clone the repository:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/your-username/finance-tracker.git
+   cd finance-tracker
+   ```
 
-### `npm run build`
+2. **Backend Setup:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   Navigate to the root directory and install the backend dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   Create a `.env` file in the root directory and add the following environment variables:
 
-### `npm run eject`
+   ```plaintext
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Start the backend server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   nodemon server.js
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Frontend Setup:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   Navigate to the `client` directory and install the frontend dependencies:
 
-## Learn More
+   ```bash
+   cd client
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   Start the React development server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Register a new user:**
+    - Open the application in your browser.
+    - Navigate to the registration page and create a new account.
 
-### Analyzing the Bundle Size
+2. **Log in:**
+    - Use your registered credentials to log in.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Add Transactions:**
+    - Add income and expense transactions with categories and amounts.
+    - View your transaction history.
 
-### Making a Progressive Web App
+4. **Set Budgets:**
+    - Set and manage budgets for different categories.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. **Visualize Data:**
+    - View simple visualizations of your financial data to track your spending and savings.
 
-### Advanced Configuration
+## API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Authentication
 
-### Deployment
+- **Register a new user:** `POST /api/auth/register`
+- **Login:** `POST /api/auth/login`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Transactions
 
-### `npm run build` fails to minify
+- **Add a new transaction:** `POST /api/transactions`
+- **Get all transactions for a user:** `GET /api/transactions`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+
+For questions or support, please contact [perpignanj13@gmail.com](mailto:your-email@example.com).
+
+---
+
+Happy tracking!
